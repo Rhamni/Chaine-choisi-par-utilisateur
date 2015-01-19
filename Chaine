@@ -1,0 +1,51 @@
+#/usr/bin/env python3
+# -*- coding: utf-8 -*-
+#
+#  pythonChaineDeCaractere.py
+#  
+#  Ecrire un script qui determine si une chaine contient ou non le caractere demander.
+#
+#  Copyright 2015 Yassine Rhamni <yassine_rhamni@hotmail.fr>
+#  
+
+#specifications
+#Les entrees du programme
+#parametre :
+#	aucun
+#retour : 
+#	ch une chaine de caractere 
+def entree():
+	print ("Recherche d'un caractere dans un texte.\n")
+	ch =input("Ecrivez un texte :")
+	a =input ("\nEcrivez la lettre a chercher :")
+	return ch,a
+	
+#specifications
+#recherche du caractere 'e' dans ch.
+#parametre : 
+#	ch une chaine de caractere
+#retour
+#	0 si le caractere demander n'est pas dans le texte
+#	t+1 si le caractere est dans le texte
+def recherche(ch,a):
+	t=0
+	for i in range(0,len(ch)):
+		if a==ch[i]:
+			t=t+1 
+	return t
+#specifications
+#parametre : 
+#	t un booleen 
+#retour
+#	aucun
+def pourImpression(t):
+	if a:
+		print("\nle texte contient le caractere ",a," ",str(t)," fois.")
+	else:
+		print("\nle texte ne contient pas le caractere demander.")
+
+print ("   ---> Debut du programme.\n")
+texte,a=entree()
+test=recherche(texte,a)
+pourImpression(test)
+print ("\n   ---> Fin du programme.")
